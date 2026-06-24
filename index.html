@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeoPass - Gerador de Senhas</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="glow glow1"></div>
+<div class="glow glow2"></div>
+
+<div class="container">
+
+  <div class="card">
+<p class="credit">criado por Gabriel D.</p>
+    <div class="header">
+      <h1>⚡ NeoPass</h1>
+      <p>Crie senhas impossíveis de quebrar em segundos</p>
+    </div>
+
+    <div class="password-box">
+      <input type="text" id="password" readonly placeholder="Clique em gerar senha"/>
+      <button onclick="copyPassword()">📋</button>
+    </div>
+
+    <div class="strength">
+      <div class="bar">
+        <div id="barFill"></div>
+      </div>
+      <div class="info">
+        <span id="level">Força: —</span>
+        <span id="time">Tempo: —</span>
+      </div>
+    </div>
+
+    <div class="controls">
+
+      <label>Tamanho: <span id="lenValue">16</span></label>
+      <input type="range" id="length" min="6" max="64" value="16"/>
+
+      <div class="grid">
+        <label><input type="checkbox" id="upper" checked/> A-Z</label>
+        <label><input type="checkbox" id="lower" checked/> a-z</label>
+        <label><input type="checkbox" id="nums" checked/> 0-9</label>
+        <label><input type="checkbox" id="sym" checked/> @#!</label>
+      </div>
+
+    </div>
+
+    <button class="btn" onclick="generate()">
+      ✨ Gerar Senha Ultra Segura
+    </button>
+
+    <p id="msg"></p>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
